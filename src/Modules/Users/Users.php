@@ -8,6 +8,5 @@ class Users extends AdminModule
 {
     protected $caption = 'Users';
     protected $action = \Nanuc\LaravelAdmin\Modules\Users\Livewire\Users::class;
-    protected $route = 'users';
     protected $icon = 'users';
 }

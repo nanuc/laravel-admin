@@ -2,16 +2,17 @@
 
 namespace Nanuc\LaravelAdmin\Modules;
 
+use Illuminate\Support\Str;
+
 abstract class AdminModule
 {
     protected $caption;
-    protected $route;
     protected $action;
     protected $icon;
 
     public function getRoute()
     {
-        return $this->route;
+        return Str::kebab((new \ReflectionClass($this))->getShortName());
     }
 
     public function getAction()
