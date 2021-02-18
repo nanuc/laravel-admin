@@ -1,8 +1,7 @@
 <?php
 
-namespace Nanuc\LaravelAdmin\Http\Livewire;
+namespace Nanuc\LaravelAdmin\Modules\Users\Livewire;
 
-use App\Models\User;
 use Livewire\Component;
 
 class Users extends Component

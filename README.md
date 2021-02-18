@@ -5,6 +5,7 @@ This package adds an admin panel to your app.
 
 #### Publish config
 ` php artisan vendor:publish --provider="Nanuc\LaravelAdmin\LaravelAdminServiceProvider" --tag=config`
+You can enable/disable modules in the `modules` parameter. You can add own modules too - see "Customization".
 
 #### Edit .env
 Add the user accounts that are supposed to be admins to your .env.
@@ -29,3 +30,6 @@ You can use the `@admin` directive in your blade views.
     Only admins can see this.
 @endadmin
 ```
+
+## Customization
+You can create own modules that will appear in the navigation. You have to create a class that extends `Nanuc\LaravelAdmin\Modules\AdminModule`. See how `Nanuc\LaravelAdmin\Modules\Users\Users` is built and start from there.

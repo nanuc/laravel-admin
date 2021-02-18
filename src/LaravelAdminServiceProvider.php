@@ -5,9 +5,8 @@ namespace Nanuc\LaravelAdmin;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
-use Nanuc\LaravelAdmin\Http\Livewire\Dashboard;
-use Nanuc\LaravelAdmin\Http\Livewire\Users;
 use Nanuc\LaravelAdmin\Http\Middleware\IsAdmin;
+use Nanuc\LaravelAdmin\Modules\Users\Livewire\Users;
 
 class LaravelAdminServiceProvider extends ServiceProvider
 {
@@ -27,8 +26,7 @@ class LaravelAdminServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
 
-        Livewire::component('nanuc.laravel-admin.http.livewire.users', Users::class);
-        Livewire::component('nanuc.laravel-admin.http.livewire.dashboard', Dashboard::class);
+        Livewire::component('nanuc.laravel-admin.modules.livewire.users', Users::class);
 
         config(['laravel-impersonate.leave_redirect_to' => 'admin/users']);
     }

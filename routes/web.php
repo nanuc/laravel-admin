@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 Route::name('admin.')->prefix('admin')->middleware(['web', 'admin'])->group(function () {
-    Route::redirect('', 'admin/' . \Illuminate\Support\Arr::first(config('laravel-admin.modules'))['route'])->name('home');
+    $firstModuleClassName = \Illuminate\Support\Arr::first(config('laravel-admin.modules'));
+    $firstModuleClass = new $firstModuleClassName;
+    Route::redirect('', 'admin/' . $firstModuleClass->getRoute())->name('home');
     foreach(config('laravel-admin.modules') as $module) {
-        Route::get($module['route'], $module['action']);
+        $module = new $module;
+        Route::get($module->getRoute(), $module->getAction());
     }
 });
 
