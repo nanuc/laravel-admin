@@ -2,18 +2,20 @@
 
 namespace Nanuc\LaravelAdmin\Modules\Users\Livewire;
 
-use Livewire\Component;
+use Nanuc\LaravelAdmin\Modules\ModuleComponent;
 
-class Users extends Component
+class Users extends ModuleComponent
 {
-    public $title = 'Users';
+    protected $title = 'Users';
+    protected $view = 'admin::users';
 
     public $search = '';
 
-    public function render()
+    protected function getRenderParameters()
     {
-        return view('admin::users', ['users' => $this->getUsers()])
-            ->layout('admin::layout', ['title' => $this->title]);
+        return [
+            'users' => $this->getUsers()
+        ];
     }
 
     protected function getUsers()
