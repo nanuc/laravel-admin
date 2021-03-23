@@ -6,5 +6,7 @@ return [
     'user-model' => \App\Models\User::class,
     'modules' => [
         \Nanuc\LaravelAdmin\Modules\Users\Users::class,
-    ]
+    ],
+    'route' => 'admin',
+    'back-to-app-route' => 'dashboard',
 ];

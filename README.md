@@ -5,6 +5,9 @@ This package adds an admin panel to your app.
 
 #### Publish config
 ` php artisan vendor:publish --provider="Nanuc\LaravelAdmin\LaravelAdminServiceProvider" --tag=config`
+
+This package assumes you want to access your admin panel at `/admin` and have a route `dashboard` (to return to from the admin panel). You can setup change this values in the config.
+
 You can enable/disable modules in the `modules` parameter. You can add own modules too - see "Customization".
 
 #### Edit .env

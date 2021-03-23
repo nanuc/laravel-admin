@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
     @livewireStyles
 
@@ -153,7 +153,7 @@
                     </nav>
                 </div>
                 <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
-                    <a href="{{ route('dashboard') }}" class="flex-shrink-0 w-full group block">
+                    <a href="{{ route(config('laravel-admin.back-to-app-route')) }}" class="flex-shrink-0 w-full group block">
                         <div class="flex items-center">
 
                             <div class="ml-3">
