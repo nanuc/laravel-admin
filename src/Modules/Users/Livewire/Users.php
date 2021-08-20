@@ -35,6 +35,6 @@ class Users extends ModuleComponent
     public function impersonate($user)
     {
         auth()->user()->impersonate(config('laravel-admin.user-model')::find($user));
-        return redirect(config('laravel-admin.back-to-app-route'));
+        return redirect()->route(config('laravel-admin.back-to-app-route'));
     }
 }
