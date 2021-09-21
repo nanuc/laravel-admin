@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 use Nanuc\LaravelAdmin\Http\Middleware\IsAdmin;
 use Nanuc\LaravelAdmin\Modules\Users\Livewire\Users;
+use Nanuc\LaravelAdmin\Modules\Users\Livewire\UsersTable;
 
 class LaravelAdminServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,7 @@ class LaravelAdminServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
 
         Livewire::component('nanuc.laravel-admin.modules.livewire.users', Users::class);
+        Livewire::component('nanuc.laravel-admin.modules.livewire.users-table', UsersTable::class);
 
         config(['laravel-impersonate.leave_redirect_to' => 'admin/users']);
     }
