@@ -15,8 +15,9 @@
 
     @livewireStyles
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    @if(file_exists(public_path('js/app.js')))
+        <script src="{{ mix('js/app.js') }}" defer></script>
+    @endif
 </head>
 <body class="font-sans antialiased">
 <!-- This example requires Tailwind CSS v2.0+ -->
