@@ -3,6 +3,7 @@
 namespace Nanuc\LaravelAdmin\Modules;
 
 use Illuminate\Support\Str;
+use Nanuc\LaravelAdmin\Exceptions\LaravelAdminException;
 
 abstract class AdminModule
 {
@@ -22,6 +23,10 @@ abstract class AdminModule
 
     public function getIcon()
     {
+        if(!$this->icon) {
+            throw new LaravelAdminException("No icon defined for module " . self::class);
+        }
+
         return $this->icon;
     }
 
