@@ -15,9 +15,12 @@
 
     @livewireStyles
 
-    @if(file_exists(public_path('js/app.js')))
-        <script src="{{ mix('js/app.js') }}" defer></script>
-    @endif
+    @foreach(config('laravel-admin.styles') as $url)
+        <link href="{{ $url }}" rel="stylesheet">
+    @endforeach
+    @foreach(config('laravel-admin.scripts') as $url)
+        <script src="{{ $url }}" defer></script>
+    @endforeach
 </head>
 <body class="font-sans antialiased">
 <!-- This example requires Tailwind CSS v2.0+ -->
