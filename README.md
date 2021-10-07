@@ -35,4 +35,15 @@ You can use the `@admin` directive in your blade views.
 ```
 
 ## Customization
+#### Custom Modules
 You can create own modules that will appear in the navigation. You have to create a class that extends `Nanuc\LaravelAdmin\Modules\AdminModule`. See how `Nanuc\LaravelAdmin\Modules\Users\Users` is built and start from there.
+
+#### Custom CSS/JS
+To import your own CSS/JS go to your laravel-admin config.
+```
+'styles' => [
+    asset('path/to/your/custom.css')
+],
+'scripts' => [
+    asset('path/to/your/custom.js')
+],

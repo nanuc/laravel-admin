@@ -9,4 +9,10 @@ return [
     ],
     'route' => 'admin',
     'back-to-app-route' => 'dashboard',
+    'styles' => [
+
+    ],
+    'scripts' => [
+
+    ],
 ];
