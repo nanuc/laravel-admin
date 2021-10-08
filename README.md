@@ -42,8 +42,8 @@ You can create own modules that will appear in the navigation. You have to creat
 To import your own CSS/JS go to your laravel-admin config.
 ```
 'styles' => [
-    asset('path/to/your/custom.css')
+    env('APP_URL').'/path/to/your/custom.css',
 ],
 'scripts' => [
-    asset('path/to/your/custom.js')
+    env('APP_URL').'/path/to/your/custom.js',
 ],
