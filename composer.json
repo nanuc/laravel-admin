@@ -11,7 +11,7 @@
         "blade-ui-kit/blade-heroicons": "^1.1",
         "livewire/livewire": "^2.3",
         "lab404/laravel-impersonate": "^1.7",
-        "rappasoft/laravel-livewire-tables": "^2.0"
+        "rappasoft/laravel-livewire-tables": "^1.15"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0"
