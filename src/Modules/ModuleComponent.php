@@ -12,7 +12,7 @@ abstract class ModuleComponent extends Component
     public function render()
     {
         return view($this->getView(), $this->getRenderParameters())
-            ->layout('admin::layout', ['title' => $this->title]);
+            ->layout(config('laravel-admin.layout'), ['title' => $this->title]);
     }
 
     protected function getView()

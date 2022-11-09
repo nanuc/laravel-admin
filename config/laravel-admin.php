@@ -9,6 +9,7 @@ return [
     ],
     'route' => 'admin',
     'back-to-app-route' => 'dashboard',
+    'layout' => 'admin::layout',
     'styles' => [
 
     ],
